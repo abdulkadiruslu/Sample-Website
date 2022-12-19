@@ -370,3 +370,8 @@ header.sticky{
     padding: 5rem;
     padding-left: 7.5%;
 }
+
+.last-text{
+    margin: 1rem;
+    text-align: center;
+}
