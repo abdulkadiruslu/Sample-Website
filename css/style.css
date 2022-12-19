@@ -17,10 +17,12 @@
     --h2-font: 3rem;
     --h3-font: 2rem;
     --h4-font: 1.5rem;
-    --h5-font: 1rem;
+    --h5-font: 1.5rem;
     --p-font: 1rem;
     --a-transition: all .40s ease;
     --a-font: 1.2rem;  
+    --h6-font: 1rem;
+    --box-background: #12141c;
 }
 body {
     background-color: var(--bg-color);
@@ -32,8 +34,8 @@ header{
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 1000;
     display: flex;
+    z-index: 1000;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
@@ -222,5 +224,149 @@ header.sticky{
     color: var(--primary-color)
 }
 
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
 
+.portfolio-box{
+    background:#12141c;
+    border-radius: 2rem;
+    padding: 15px;
+    border-top: 5px solid transparent;
+    
+    
+}
 
+.portfolio-box img{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-box h6{
+    color: var(--primary-color);
+    font-size: var(--h6-font);
+}
+
+.portfolio-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.portfolio-box-text h6{
+    font-size: var(--h6-font)
+}
+
+.portfolio-box h3{
+    text-align: left;
+    font-size: var(--h3-font);
+    color:var(--text-color)
+}
+
+.portfolio-box:hover {
+    border-top: solid var(--primary-color);
+    transition: var(--a-transition);
+}
+
+.fas-fa-heart {
+    color: var(--text-color);
+}
+
+.fas-fa-heart:active {
+    color: var(--primary-color);
+}
+
+.contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: auto;
+    gap: 2rem;
+}
+
+.contact-text h2 {
+    color: var(--text-color);
+    font-size: var(--h2-font);
+    margin-bottom: 1rem;
+}
+
+.contact-text h4{
+    color: var(--primary-color);
+    font-size: var(--h4-font);
+    margin-bottom: 1rem;
+}
+.contact-text{
+    width: 100%;
+}
+
+.contact-text p{
+    color:var(--secondary-color);
+    font-size: var(--p-font);
+    margin-bottom: 1rem;
+}
+
+.contact-text a{
+    color: var(--text-color);
+    font-size: var(var(--a-font));
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.contact-icons{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.contact-icons a{
+    color: var(--primary-color);
+    background:var(--box-background);
+    padding: 1.5rem; 
+    border-radius: 1rem;
+}
+
+.contact-icons a:hover{
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+.submit-box {
+    width: 30%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    margin-left: 0.8rem;
+}
+
+.submit-box:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px white;
+}
+
+.submit-box:active {
+    transition: var(--a-transition);
+}
+
+.contact-form input, textarea{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--box-background);
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border:none;
+    color: var(--text-color);
+}
+
+.contact-form textarea{
+    position: relative;
+    padding: 5rem;
+    padding-left: 7.5%;
+}
