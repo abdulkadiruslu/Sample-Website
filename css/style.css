@@ -127,7 +127,8 @@ header.sticky{
 
 .about{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
     gap: 2rem;
 }
@@ -188,7 +189,8 @@ header.sticky{
 
 .services-content {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); 
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 10px;
@@ -226,7 +228,8 @@ header.sticky{
 
 .portfolio-content{
     display: grid;
-    grid-template-columns: repeat(3,2fr);
+    /* grid-template-columns: repeat(3,2fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
     gap: 1.5rem;
     text-align: center;
@@ -285,7 +288,8 @@ header.sticky{
 .contact {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: auto;
     gap: 2rem;
 }
@@ -374,4 +378,53 @@ header.sticky{
 .last-text{
     margin: 1rem;
     text-align: center;
+}
+/* 
+
+    --bg-color: #020312;
+    --text-color: #fff;
+    --primary-color: #eb4a4a;
+    --secondary-color: grey;
+    --h1-font: 5rem;
+    --h2-font: 3rem;
+    --h3-font: 2rem;
+    --h4-font: 1.5rem;
+    --h5-font: 1.5rem;
+    --p-font: 1rem;
+    --a-transition: all .40s ease;
+    --a-font: 1.2rem;  
+    --h6-font: 1rem;
+    --box-background: #12141c;
+
+*/
+
+@media (min-width: 320px) and (max-width: 425px) {
+    :root{
+        --h1-font: 3rem;
+        --h2-font: 2.5rem;
+        --h5-font: 1.2;
+        --p-font: 1rem;
+    }
+}
+
+@media (min-width: 425px) and (max-width:768px) {
+    .navbar a{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    :root{
+        --h1-font: 4.5rem;
+        --h2-font: 2.8rem;
+    }
+
+    section {
+        padding: 100px 15% 90px;
+
+    }
+}
+@media (min-width:768px) and (max-witdh:1440px) {
+    section {
+        padding: 120px 10% 90px;
+    }
 }
